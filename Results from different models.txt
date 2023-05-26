@@ -1,0 +1,13 @@
+Outputs from different Models:
+
+1. Linear Regression:
+    Mean:  3.8499450940609643
+    SD:  0.894961853093878
+
+2. Decision Tree:
+    Mean:  2.5616856451755012
+    SD:  0.7165641745701393
+    
+3. Random Forest Regressor
+    Mean:  2.1459311490126316
+    SD:  0.3473812546401582
