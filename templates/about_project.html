@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #405D72;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(60deg, #405D72, #76ABAE, #758694);
+            background-size: 500% 500%;
+            animation: color 8s ease-in-out infinite;
+        }
+        @keyframes color {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+        .container {
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222831;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            text-align: left;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About the Project</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about_project">About Project</a>
+            <a href="/about_developer">About Developer</a>
+        </nav>
+        <div class="content">
+            <p>This project uses a machine learning model to predict house prices based on various features such as crime rate, number of rooms, and proximity to employment centers. The model was trained using the Boston housing dataset and achieved an accuracy of 89%.</p>
+            <p>The main objective of this project is to provide an easy-to-use tool for estimating the price of a house based on certain key characteristics. This can be useful for potential homebuyers, real estate agents, and market analysts.</p>
+            <h2>Boston Housing Data</h2>
+            <h3>Sources:</h3>
+            <ul>
+                <li><strong>Origin:</strong> This dataset was taken from the StatLib library which is maintained at Carnegie Mellon University.</li>
+                <li><strong>Creator:</strong> Harrison, D. and Rubinfeld, D.L. 'Hedonic prices and the demand for clean air', J. Environ. Economics & Management, vol.5, 81-102, 1978.</li>
+                <li><strong>Date:</strong> July 7, 1993</li>
+            </ul>
+            <h3>Past Usage:</h3>
+            <ul>
+                <li>Used in Belsley, Kuh & Welsch, 'Regression diagnostics ...', Wiley, 1980. Various transformations are used in the table on pages 244-261.</li>
+                <li>Quinlan, R. (1993). Combining Instance-Based and Model-Based Learning. In Proceedings on the Tenth International Conference of Machine Learning, 236-243, University of Massachusetts, Amherst. Morgan Kaufmann.</li>
+            </ul>
+            <h3>Relevant Information:</h3>
+            <p>Concerns housing values in suburbs of Boston.</p>
+            <h3>Number of Instances:</h3>
+            <p>506</p>
+            <h3>Number of Attributes:</h3>
+            <p>13 continuous attributes (including "class" attribute "MEDV"), 1 binary-valued attribute.</p>
+            <h3>Attribute Information:</h3>
+            <ul>
+                <li><strong>CRIM:</strong> Per capita crime rate by town</li>
+                <li><strong>ZN:</strong> Proportion of residential land zoned for lots over 25,000 sq.ft.</li>
+                <li><strong>INDUS:</strong> Proportion of non-retail business acres per town</li>
+                <li><strong>CHAS:</strong> Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</li>
+                <li><strong>NOX:</strong> Nitric oxides concentration (parts per 10 million)</li>
+                <li><strong>RM:</strong> Average number of rooms per dwelling</li>
+                <li><strong>AGE:</strong> Proportion of owner-occupied units built prior to 1940</li>
+                <li><strong>DIS:</strong> Weighted distances to five Boston employment centres</li>
+                <li><strong>RAD:</strong> Index of accessibility to radial highways</li>
+                <li><strong>TAX:</strong> Full-value property-tax rate per $10,000</li>
+                <li><strong>PTRATIO:</strong> Pupil-teacher ratio by town</li>
+                <li><strong>B:</strong> 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</li>
+                <li><strong>LSTAT:</strong> % lower status of the population</li>
+                <li><strong>MEDV:</strong> Median value of owner-occupied homes in $1000's</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

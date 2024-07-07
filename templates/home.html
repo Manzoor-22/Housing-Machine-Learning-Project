@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #405D72;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(60deg, #102C57, #BED7DC, #758694);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+        }
+        @keyframes color {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #102C57;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222831;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .form-group {
+            width: 48%;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: white;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .prediction {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .info {
+            margin-top: 20px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about_project">About Project</a>
+            <a href="/about_developer">About Developer</a>
+        </nav>
+        <form action="/predict" method="post">
+            <label for="CRIM">CRIM(Per capita crime rate by town):</label>
+            <input type="text" id="CRIM" name="CRIM">
+
+            <label for="ZN">ZN(Proportion of residential land zoned for lots over 25,000 sq.ft.):</label>
+            <input type="text" id="ZN" name="ZN">
+
+            <label for="INDUS">INDUS(Proportion of non-retail business acres per town):</label>
+            <input type="text" id="INDUS" name="INDUS">
+
+            <label for="CHAS">CHAS(Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)):</label>
+            <input type="text" id="CHAS" name="CHAS">
+
+            <label for="NOX">NOX(Nitric oxides concentration (parts per 10 million)):</label>
+            <input type="text" id="NOX" name="NOX">
+
+            <label for="RM">RM(Average number of rooms per dwelling):</label>
+            <input type="text" id="RM" name="RM">
+
+            <label for="AGE">AGE(Proportion of owner-occupied units built prior to 1940):</label>
+            <input type="text" id="AGE" name="AGE">
+
+            <label for="DIS">DIS(Weighted distances to five Boston employment centres):</label>
+            <input type="text" id="DIS" name="DIS">
+
+            <label for="RAD">RAD(Index of accessibility to radial highways):</label>
+            <input type="text" id="RAD" name="RAD">
+
+            <label for="TAX">TAX(Full-value property-tax rate per $10,000):</label>
+            <input type="text" id="TAX" name="TAX">
+
+            <label for="PTRATIO">PTRATIO(Pupil-teacher ratio by town):</label>
+            <input type="text" id="PTRATIO" name="PTRATIO">
+
+            <label for="B">B(1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town):</label>
+            <input type="text" id="B" name="B">
+
+            <label for="LSTAT">LSTAT(% lower status of the population):</label>
+            <input type="text" id="LSTAT" name="LSTAT">
+
+            <input type="submit" value="Predict">
+        </form>
+        <div class="prediction">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        
+    </div>
+</body>
+</html>
